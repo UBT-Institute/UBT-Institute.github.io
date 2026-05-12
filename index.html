@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UBT Institute | Unified Biquaternion Theory</title>
+    <meta
+      name="description"
+      content="UBT Institute advances Unified Biquaternion Theory with an AI-augmented scientific workflow."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "#0a0a0a",
+              panel: "#111217",
+              electric: "#3b82f6",
+              quantum: "#8b5cf6",
+              ink: "#f8fafc",
+              mute: "#94a3b8"
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"]
+            },
+            boxShadow: {
+              halo: "0 0 0 1px rgba(255,255,255,0.06), 0 0 60px rgba(59,130,246,0.18)"
+            }
+          }
+        }
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["$", "$"], ["\\(", "\\)"]],
+          displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+        },
+        options: {
+          renderActions: {
+            addMenu: []
+          }
+        }
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at 20% -10%, rgba(59, 130, 246, 0.15), transparent 40%),
+          radial-gradient(circle at 80% 0%, rgba(139, 92, 246, 0.12), transparent 35%),
+          linear-gradient(180deg, #0a0a0a 0%, #090a0f 45%, #0a0a0a 100%);
+      }
+
+      .glass {
+        backdrop-filter: blur(4px);
+        background: linear-gradient(160deg, rgba(17, 18, 23, 0.82), rgba(12, 13, 18, 0.62));
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        animation: fadeUp 0.8s ease-out forwards;
+      }
+
+      .reveal-delay-1 {
+        animation-delay: 0.12s;
+      }
+
+      .reveal-delay-2 {
+        animation-delay: 0.24s;
+      }
+
+      .reveal-delay-3 {
+        animation-delay: 0.36s;
+      }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="h-full font-sans text-ink antialiased">
+    <div class="relative min-h-screen overflow-x-hidden">
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-electric/10 blur-3xl"></div>
+      </div>
+
+      <header class="mx-auto w-full max-w-6xl px-6 pb-12 pt-10 sm:px-10">
+        <div class="reveal flex items-center justify-between border-b border-white/10 pb-5">
+          <div class="text-sm tracking-[0.24em] text-mute">UBT INSTITUTE</div>
+          <div class="flex items-center gap-3">
+            <div class="inline-flex rounded-full border border-white/15 bg-white/5 p-1 text-xs">
+              <button
+                type="button"
+                data-set-lang="en"
+                class="lang-toggle rounded-full px-3 py-1 font-medium text-slate-300 transition"
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                data-set-lang="cs"
+                class="lang-toggle rounded-full px-3 py-1 font-medium text-slate-300 transition"
+              >
+                CZ
+              </button>
+            </div>
+            <a
+              href="#research"
+              class="rounded-full border border-white/20 px-4 py-2 text-xs font-medium tracking-wider text-mute transition hover:border-electric/60 hover:text-ink"
+            >
+              <span data-lang="en">Explore Research</span>
+              <span data-lang="cs" class="hidden">Prozkoumat výzkum</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="mx-auto w-full max-w-6xl space-y-24 px-6 pb-20 sm:px-10">
+        <section class="text-center">
+          <p class="reveal text-sm uppercase tracking-[0.2em] text-mute">
+            <span data-lang="en">Foundational Physics • Prague</span>
+            <span data-lang="cs" class="hidden">Základní fyzika • Praha</span>
+          </p>
+          <h1 class="reveal reveal-delay-1 mt-6 text-5xl font-semibold tracking-tight sm:text-7xl">UBT Institute</h1>
+          <p class="reveal reveal-delay-2 mx-auto mt-8 max-w-3xl text-balance text-lg text-slate-300 sm:text-xl" data-lang="en">
+            Unified Biquaternion Theory: Spacetime as a Projection of
+            <span class="font-mono text-electric">$\mathbb{C} \otimes \mathbb{H}$</span>
+          </p>
+          <p class="reveal reveal-delay-2 mx-auto mt-8 hidden max-w-3xl text-balance text-lg text-slate-300 sm:text-xl" data-lang="cs">
+            Jednotná bikvaternionová teorie: Časoprostor jako projekce
+            <span class="font-mono text-quantum">$\mathbb{C} \otimes \mathbb{H}$</span>
+          </p>
+
+          <div class="reveal reveal-delay-3 mx-auto mt-14 max-w-4xl rounded-2xl border border-white/10 glass px-6 py-10 shadow-halo sm:px-10">
+              <p class="text-xs uppercase tracking-[0.24em] text-mute">
+                <span data-lang="en">Core Equation</span>
+                <span data-lang="cs" class="hidden">Základní rovnice</span>
+              </p>
+            <div class="mt-5 overflow-x-auto text-center font-mono text-3xl text-ink sm:text-4xl">
+              $$\nabla^\dagger \nabla \Theta = \kappa T$$
+            </div>
+          </div>
+        </section>
+
+        <section class="grid gap-8 lg:grid-cols-5">
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl font-semibold tracking-tight">
+              <span data-lang="en">The Vision</span>
+              <span data-lang="cs" class="hidden">Vize</span>
+            </h2>
+              <p class="mt-3 text-sm uppercase tracking-[0.18em] text-mute">
+                <span data-lang="en">About</span>
+                <span data-lang="cs" class="hidden">O projektu</span>
+              </p>
+          </div>
+          <div class="lg:col-span-3">
+            <p class="leading-relaxed text-slate-300" data-lang="en">
+              We investigate whether General Relativity and the Standard Model can be derived as emergent,
+              real-projected limits of one algebraic substrate.
+            </p>
+            <p class="hidden leading-relaxed text-slate-300" data-lang="cs">
+              Zkoumáme, zda lze obecnou relativitu a standardní model odvodit jako emergentní,
+              reálně projektované limity jediné algebraické struktury.
+            </p>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-white/10 glass p-8 sm:p-10">
+          <h2 class="text-2xl font-semibold tracking-tight">
+            <span data-lang="en">Synthetic Lab Methodology</span>
+            <span data-lang="cs" class="hidden">Metodologie syntetické laboratoře</span>
+          </h2>
+          <p class="mt-3 text-sm uppercase tracking-[0.18em] text-mute">
+            <span data-lang="en">AI-Augmented Research Pipeline</span>
+            <span data-lang="cs" class="hidden">Výzkumný proces rozšířený o AI</span>
+          </p>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <i data-lucide="sparkles" class="h-6 w-6 text-electric"></i>
+              <h3 class="mt-5 text-lg font-medium">AI Hypothesis</h3>
+              <p class="mt-3 text-sm text-slate-300" data-lang="en">
+                Symbolic proposal generation across geometric, algebraic and field-theoretic constraints.
+              </p>
+              <p class="mt-3 hidden text-sm text-slate-300" data-lang="cs">
+                Generování hypotetických struktur nad geometrií, algebrou a teorií polí.
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <i data-lucide="badge-check" class="h-6 w-6 text-quantum"></i>
+              <h3 class="mt-5 text-lg font-medium">Formal Verification</h3>
+              <p class="mt-3 text-sm text-slate-300" data-lang="en">
+                Rigorous consistency checks, dimensional sanity, and equation-level validation.
+              </p>
+              <p class="mt-3 hidden text-sm text-slate-300" data-lang="cs">
+                Formální ověření konzistence, dimenzionality a rovnicové validity.
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <i data-lucide="shield-check" class="h-6 w-6 text-electric"></i>
+              <h3 class="mt-5 text-lg font-medium">Human Audit (L0/L1/MC)</h3>
+              <p class="mt-3 text-sm text-slate-300" data-lang="en">
+                Multi-stage review with epistemic checkpoints and publication gatekeeping.
+              </p>
+              <p class="mt-3 hidden text-sm text-slate-300" data-lang="cs">
+                Víceúrovňová lidská kontrola s epistemickými checkpointy.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="research" class="grid gap-8 lg:grid-cols-5">
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl font-semibold tracking-tight">
+              <span data-lang="en">Publications & Research</span>
+              <span data-lang="cs" class="hidden">Publikace a výzkum</span>
+            </h2>
+              <p class="mt-3 hidden text-sm uppercase tracking-[0.18em] text-mute" data-lang="cs">Publikace a výzkum</p>
+              <p class="mt-3 text-sm uppercase tracking-[0.18em] text-mute" data-lang="en">Publications and research</p>
+          </div>
+          <div class="lg:col-span-3 rounded-2xl border border-white/10 bg-white/5 p-6">
+            <h3 class="text-lg font-medium">General Relativity as a Real-Projected Limit of UBT</h3>
+            <p class="mt-2 text-sm text-slate-300" data-lang="en">Preprint placeholder with derivation notes and formal appendices.</p>
+            <p class="mt-2 hidden text-sm text-slate-300" data-lang="cs">Placeholder preprintu s poznámkami k odvození a formálními dodatky.</p>
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              class="mt-5 inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm text-slate-400"
+            >
+              <i data-lucide="file-text" class="h-4 w-4"></i>
+                <span data-lang="en">Paper in preparation</span>
+                <span data-lang="cs" class="hidden">Paper je v přípravě</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-white/10 glass p-8 sm:p-10">
+          <h2 class="text-2xl font-semibold tracking-tight">
+            <span data-lang="en">Principal Researcher</span>
+            <span data-lang="cs" class="hidden">Hlavní výzkumník</span>
+          </h2>
+            <p class="mt-3 text-sm uppercase tracking-[0.18em] text-mute">
+              <span data-lang="en">Lead scientist</span>
+              <span data-lang="cs" class="hidden">Vedoucí vědecký pracovník</span>
+            </p>
+
+          <div class="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/5 text-lg font-semibold text-ink">
+              DJ
+            </div>
+            <div>
+              <p class="text-lg font-medium">Ing. David Jaros</p>
+              <p class="text-sm text-slate-300">Prague, Czech Republic</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-white/10 pb-12 pt-8">
+        <div class="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="https://github.com/UBT-Institute" class="transition hover:text-ink">GitHub Organization</a>
+            <span class="text-white/20">|</span>
+            <a href="mailto:contact@ubt.institute" class="transition hover:text-ink">contact@ubt.institute</a>
+          </div>
+          <p>© 2026 UBT Institute. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentLang = localStorage.getItem("ubt-lang") || "en";
+        var langButtons = document.querySelectorAll("[data-set-lang]");
+
+        function setLanguage(lang) {
+          currentLang = lang === "cs" ? "cs" : "en";
+          localStorage.setItem("ubt-lang", currentLang);
+          document.documentElement.lang = currentLang;
+
+          document.querySelectorAll("[data-lang]").forEach(function (element) {
+            var isMatch = element.getAttribute("data-lang") === currentLang;
+            element.classList.toggle("hidden", !isMatch);
+          });
+
+          langButtons.forEach(function (button) {
+            var isActive = button.getAttribute("data-set-lang") === currentLang;
+            button.classList.toggle("bg-white", isActive);
+            button.classList.toggle("text-black", isActive);
+            button.classList.toggle("text-slate-300", !isActive);
+          });
+        }
+
+        langButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            setLanguage(button.getAttribute("data-set-lang"));
+          });
+        });
+
+        setLanguage(currentLang);
+
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>
